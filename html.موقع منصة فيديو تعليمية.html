@@ -58,24 +58,21 @@
 </header>
 <div class="container">
     <div class="video-player">
-        <video id="mainVideo" controls>
-            <source src="video.mp4" type="video/mp4">
-            متصفحك لا يدعم تشغيل الفيديو.
-        </video>
+            <iframe id="mainVideo" width="100%" height="450" 
+                src="https://www.youtube.com/embed/fT2_YV_T_mE" 
+                frameborder="0" allowfullscreen>
+            </iframe>
     </div>
-
     <div class="video-list">
-        <div class="video-item" onclick="changeVideo('video.mp4')">الدرس الأول</div>
-        <div class="video-item" onclick="changeVideo('video2.mp4')">الدرس الثاني</div>
-        <div class="video-item" onclick="changeVideo('video3.mp4')">الدرس الثالث</div>
+        <div class="video-item" onclick="changeVideo('https://www.youtube.com/embed/fT2_YV_T_mE')">الدرس الأول</div>
+        <div class="video-item" onclick="changeVideo('https://www.youtube.com/embed/ID_C3axGF8Ww-2tGsNe')">الدرس الثاني</div>
+        <div class="video-item" onclick="changeVideo('https://www.youtube.com/embed/ID_C3axGF8Ww-2tGsNe')">الدرس الثالث</div>
     </div>
-    </div
 
-<script>
+</div> </div> <script>
     function changeVideo(videoSrc) {
         var video = document.getElementById("mainVideo");
         video.src = videoSrc;
-        video.play();
     }
 </script>
 
