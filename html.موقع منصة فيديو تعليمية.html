@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>منصة تعليمية</title>
+    <style>
+        body {
+            font-family: Arial;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #6c63ff;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            padding: 20px;
+        }
+
+        .video-player {
+            flex: 2;
+            margin-right: 20px;
+        }
+
+        video {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .video-list {
+            flex: 1;
+            background: white;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .video-item {
+            margin-bottom: 10px;
+            cursor: pointer;
+            padding: 8px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .video-item:hover {
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>📚 منصتي التعليمية</h1>
+</header>
+<div class="container">
+    <div class="video-player">
+        <video id="mainVideo" controls>
+            <source src="video.mp4" type="video/mp4">
+            متصفحك لا يدعم تشغيل الفيديو.
+        </video>
+    </div>
+
+    <div class="video-list">
+        <div class="video-item" onclick="changeVideo('video.mp4')">الدرس الأول</div>
+        <div class="video-item" onclick="changeVideo('video2.mp4')">الدرس الثاني</div>
+        <div class="video-item" onclick="changeVideo('video3.mp4')">الدرس الثالث</div>
+    </div>
+    </div
+
+<script>
+    function changeVideo(videoSrc) {
+        var video = document.getElementById("mainVideo");
+        video.src = videoSrc;
+        video.play();
+    }
+</script>
+
+</body>
+</html>
